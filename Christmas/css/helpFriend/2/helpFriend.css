@@ -495,7 +495,7 @@ canvas.flare{opacity:0.5;}
 	}
 }
 .translateXY2{
-	-webkit-animation:translateXY1 .8s linear 1;
+	-webkit-animation:translateXY2 .8s linear 1;
 	animation:translateXY2 .8s linear 1;
 	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
