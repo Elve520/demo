@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<meta name="format-detection" content="telephone = no" />
+		<meta name="format-detection" content="email = no" />
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/helpFriend/2/helpFriend.css" />
+		<title>圣诞节装扮圣诞树</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+		<script src="../../js/jquery-3.0.0.min.js"></script>
+		<script src="../../js/helpFriend/2/jquery.let_it_snow.js"></script>
+		<style type="text/css">
+			body{
+				background:#26b5a1 url(../../img/helpFriend/2/bg02.jpg) no-repeat center top;
+				background-size: 100%;
+			}
+		</style>
+	</head>
+	<body class="fs14">
+		<canvas width="100%" height="100%" class="snow"></canvas><!--雪花-->
+		<a class="btn center css-common rule-js-btn fs14" href="javascript:void(0)">玩<br />法<br />介<br />绍</a></a>
+		<!--规则详情-->
+		<div class="mask rule-js-mask hide">
+			<div class="rule-detail rel">
+				<img src="../../img/helpFriend/2/bg001.png"/>
+				<div class="rule-p">
+					$!{activityInfo.rule}
+				</div>
+				<div class="del del-rule"></div>
+			</div>
+		</div>
+		<!--大师兄-->
+		<img src="../../img/helpFriend/2/man1.png" class="man1"/>
+		<!--头像-->
+		<a class="avatar_wd">
+			<img class="imgWidth100" id="userImg" src="../../img/gg01.jpg" />
+		</a>
+		<span class="nick"></span>
+		<!--装扮饰品-->
+		<div class="accessories flex rel">
+			<img src="../../img/helpFriend/2/1.1.png" class="gift css-1-water js-water-btn swing btn" data-num="1" id="gift1"/>
+			<img src="../../img/helpFriend/2/1.2.png" class="gift css-2-water js-water-btn swing btn" data-num="2" id="gift2"/>
+			<img src="../../img/helpFriend/2/1.3.png" class="gift css-3-water js-water-btn swing btn" data-num="3" id="gift3"/>
+			<img src="../../img/helpFriend/2/1.4.png" class="gift css-4-water js-water-btn swing btn" data-num="4" id="gift4"/>
+			<img src="../../img/helpFriend/2/1.5.png" class="gift css-5-water js-water-btn swing btn" data-num="5" id="gift5"/>
+			<img src="../../img/helpFriend/2/2.1.png" class="giftGray css-1-water swing" data-num="1"/>
+			<img src="../../img/helpFriend/2/2.2.png" class="giftGray css-2-water swing" data-num="2"/>
+			<img src="../../img/helpFriend/2/2.3.png" class="giftGray css-3-water swing" data-num="3"/>
+			<img src="../../img/helpFriend/2/2.4.png" class="giftGray css-4-water swing" data-num="4"/>
+			<img src="../../img/helpFriend/2/2.5.png" class="giftGray css-5-water swing" data-num="5"/>
+		</div>
+		<div class="clickText fs10 flex">
+			<span class="js-water-btn btn" data-num="1" id="text1">点击装扮</span>
+			<span class="js-water-btn btn" data-num="2" id="text2">点击装扮</span>
+			<span class="js-water-btn btn" data-num="3" id="text3">点击装扮</span>
+			<span class="js-water-btn btn" data-num="4" id="text4">点击装扮</span>
+			<span class="js-water-btn btn" data-num="5" id="text5">点击装扮</span>
+		</div>
+		<!--装扮区域-->
+		<div class="christmas-tree">
+			<img src="../../img/helpFriend/2/light1.png" class="lightStar"/>
+		</div>
+		<!--装扮助我得500M-->
+		<div class="getfive ">
+			<p class="fs20 center">装扮助我得<span class="prizeName">500M流量</span></p>
+		</div>
+		<!--我也要得500M-->
+		<div class="takePart center hide">
+			<a class="fs16 center takePart-prot js-takePart-btn btn">我也要得<span class="prizeName">500M流量</span></a>
+		</div>
+		<!--浇过水弹出提示框-->
+		<div class="mask promptPage hide">
+			<div class="prompt rel center">
+				<img src="../../img/helpFriend/2/bg001.png" class="part"/>
+				<div class="border codewrap-border"></div>
+				<div class="help-water">
+					<!--<p class="center help-title ">来早啦！活动还未开始呢！敬请期待~</p>-->
+					<p class="center act-end fs18"> 对不起，你来晚了</p><p class="center">好友已经完成了活动</p>
+				</div>
+				<a class="fs16 center takePart-prot js-takePart-btn btn">我也要得<span class="prizeName">500M流量</span></a>
+				<div class="del-prompt del btn"></div>
+			</div>
+		</div>
+		<!--点击浇水二维码提示框-->
+		<div class="mask codewrap hide">
+			<div class="codewrapper rel">
+				<img src="../../img/helpFriend/2/bg001.png" class="part"/>
+				<img src="../../img/helpFriend/2/bottom.png" class="bottom"/>
+				<div class="border codewrap-border"></div>
+				<p class="center fs16">一起装扮圣诞树</p>
+				<!--<img src="$!{gzQrcode}" class="code"/>-->
+				<img src="../../img/helpFriend/2/bg01.jpg" class="code"/>
+				<div class="code-prom">
+					<!--<p class="center codewrapper-p-1 fs18">识别二维码得500M流量</p>
+					<p class="center water-p-2 fs16">并完成帮好友装扮!</p>-->
+					<p class="center codewrapper-p-3 fs18">识别二维码帮好友装扮</p>
+				</div>
+				<div class="del btn"></div>
+			</div>
+		</div>
+		
+		<script>
+			var aId="$!{aid}";
+			var tid="$!{activityInfo.templateId}";//模板id
+			var act="$!{activityId}";
+			var activityId=Number(act);
+			var sId="$!{sponsorId}";
+			var sponsorId=Number(sId);
+			var openid="$!{openid}";
+			var unionid="$!{unionid}";
+			var root="#getAppRoot()";
+			var isSubscribe="$!{isSubscribe}";//是否关注 1-关注，0-未关注
+			var isNewUser="$!{isNewUser}";//是否从未关注的新用户 1-是，0-否
+			var aw='$!{aw}';
+			var helpCntLimit="$!{activityInfo.helpCntLimit}";//助力次数
+		// preload image
+            window.onload = function() {
+                setTimeout(function () {
+                   new Image().src = root+"/img/helpFriend/2/bg001.png";
+                   new Image().src = root+"/css/helpFriend/2/img/del.png";
+                   new Image().src = root+"/css/helpFriend/2/img/codewrap.png";
+                }, 1000);
+            };
+			document.addEventListener('touchstart', function () {});
+			
+		</script>
+		
+		<!--<script src="js/wxShare.js" type="text/javascript" charset="utf-8"></script>-->
+		
+		<script >
+			//分享
+			    var title = '$!{activityInfo.shareTitle}'; //分享标题
+				var desc = '$!{activityInfo.shareDesc}'; //分享简介
+				var img = '$!{activityInfo.shareImage}'; //分享图标
+//				var url = getRootUrl() + "helpFriend2.do?op=index&a="+activityId+'&aw='+$!{aw};//分享链接
+//				wxShare(title, desc, img, url);
+
+				$(function(){
+					$("canvas.snow").let_it_snow({
+						windPower: 2,
+						speed: 1,
+						count: 100,
+						size: 2
+					});
+					//删除按钮
+					$('.del').on('click',function(){
+						$('.mask').hide();
+					});
+					<!-- for(var j=1;j<6;j++){ -->
+						<!-- $('img[data-num='+j+']').removeClass('swing'); -->
+		 				<!-- $('#gift'+j).removeClass('css-'+j+'-water').addClass('css-'+j+'-water-'+j); -->
+						<!-- $('.lightStar').attr('src','../../img/helpFriend/2/light2.png'); -->
+		 			<!-- } -->
+					$('.js-water-btn').on('click',function(){
+						var $index=$(this).attr('data-num');
+						var strObj=$('#gift'+$index).attr('class');
+						if(strObj.indexOf('translateXY')>-1){
+							return;
+						}
+						dressUp($index);
+					});
+				});
+				function dressUp(index){
+					$('img[data-num='+index+']').removeClass('swing');
+					$('.lightStar').attr('src','../../img/helpFriend/2/light2.png');
+					$('#gift'+index).addClass('translateXY'+index);
+					$('#text'+index).text('已经装扮').css('color','#ccc');
+					$('.translateXY'+index).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+						var timer=setTimeout(function(){
+							$('.lightStar').attr('src','../../img/helpFriend/2/light1.png');
+							clearTimeout(timer);
+						},600);
+						$('.help-water').html('<p class="center help-title ">装扮成功!</p>');
+						$('.promptPage').fadeIn();
+					});
+				}
+        </script>
+        <!--<script src="../../js/helpFriend/2/helpShare.js" type="text/javascript" charset="utf-8"></script>-->
+	</body>
+</html>

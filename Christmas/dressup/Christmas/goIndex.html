@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<meta name="format-detection" content="telephone = no" />
+		<meta name="format-detection" content="email = no" />
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/helpFriend/2/helpFriend.css" />
+		
+		<title>圣诞节装扮圣诞树</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+		<script src="../../js/jquery-3.0.0.min.js"></script>
+		<script src="../../js/helpFriend/2/jquery.let_it_snow.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{
+				background:#fff url(../../img/helpFriend/2/bg01.jpg) no-repeat center top;
+				background-size: 100%;
+				padding-top: .9rem;
+			}
+		</style>
+	</head>
+	<body class="fs14 rel">
+		<canvas width="100%" height="100%" class="snow"></canvas>
+		<img src="../../img/helpFriend/2/title.png" class="title-img"/>
+		<!--go-->
+		<a href="partWater.html" class="js-takego-btn btn"></a>
+		<!--规则和卡券-->
+		<a class="btn center rule-js-btn fs14" href="javascript:void(0)">玩<br />法<br />介<br />绍</a>
+		<img src="../../img/helpFriend/2/man1.png" class="man1"/>
+		<!--规则内容-->
+		<div class="mask rule-js-mask hide">
+			<div class="rule-detail rel">
+				<img src="../../img/helpFriend/2/bg001.png"/>
+					<div class="rule-p">
+						#*<p> 1、活动时间：2017年*月*日至*月*日</p>
+						<p> 2、您每邀请一位好友浇水，便可获得一棵树，累计获得5棵树可获得500M流量；</p>
+						<p>	3、每位用户可发起2次邀请好友浇水的游戏；</p>
+						<p>	4、每位用户最多可为2个好友浇水，但只能为同一好友浇水一次；</p>
+						<p>	5、若您是首次关注用户，帮好友浇水时，还有机会获赠50M流量券，随机奖励；</p>
+						<p>	6、您获赠的流量可点击活动界面的“我的卡券”按钮查看和兑换，点击后需跳转至山东移动掌上营业厅APP方可兑换使用；</p>
+						<p>	7、流量兑换券有效期以卡券中显示时间为准，成功提交兑换申请后将于7个工作日到账；</p>
+						<p>	8、流量将赠送至您绑定的手机号中（仅限**移动用户）；</p>
+						<p>	9、所赠流量为套餐外省内通用流量，优先级低于套餐流量，当账期有效；</p>
+						<p>	10、参与本活动的用户如在活动期间因欠费停机、主动停机、销户、套餐变更等因素造成无法充入奖励流量的情况，后果由客户自行承担；</p>
+						<p>	11、如发现用户通过不正当途径参加本活动，我公司有权终止该用户参加本次活动并取消其获奖资格；</p>
+						<p>	12、 MO套餐、无极变速套餐、数据卡、物联卡、随心卡、行业应用卡、公话卡、信息机用户受活动限制将无法正常参与活动。</p>*#
+						$!{activityInfo.rule}
+					</div>
+				<div class="del del-rule btn"></div>
+			</div>
+		</div>
+		<!--<script src="js/wxShare.js" type="text/javascript" charset="utf-8"></script>-->
+		<script>
+			var aId="$!{activityInfo.weixinAccountid}";
+			var act="$!{activityId}";
+			var activityId=Number(act);
+			var root="../../";
+			var aw='$!{aw}';
+			//参加活动Go
+        	$('.js-takego-btn').on('click',function(){
+        		window.location.href=getRootUrl() + "helpFriend2.do?op=sponsor&a="+activityId+'&aw='+aw;
+        	});
+			//查看规则
+        	$('.rule-js-btn').on('click',function(){
+        		$('.rule-js-mask').show();
+        	});
+			//删除按钮
+        	$('.del').on('click',function(){
+        		$('.mask').hide();
+        	});
+		// preload image
+            window.onload = function() {
+            	$("canvas.snow").let_it_snow({
+					windPower: 2,
+					speed: 1,
+					count: 100,
+					size: 2
+				});
+                setTimeout(function () {
+                   new Image().src = root+"/css/helpFriend/2/img/go1.png";
+                   new Image().src = root+"/img/helpFriend/2/bg001.png";
+                   new Image().src = root+"/css/helpFriend/2/img/del.png";
+                   new Image().src = root+"/css/helpFriend/2/img/del01.png";
+                }, 1000);
+            };
+			
+			document.addEventListener('touchstart', function () {});
+		</script>
+		<script >
+			//分享
+				var title = '$!{activityInfo.shareTitle}'; //分享标题
+				var desc = '$!{activityInfo.shareDesc}'; //分享简介
+				var img = '$!{activityInfo.shareImage}'; //分享图标
+//				var url = getRootUrl() + "helpFriend2.do?op=index&a="+activityId+'&aw='+$!{aw};//分享链接
+//				wxShare(title, desc, img, url);
+        </script>
+	</body>
+</html>
