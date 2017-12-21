@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<meta name="format-detection" content="telephone = no" />
+		<meta name="format-detection" content="email = no" />
+		<link rel="stylesheet" type="text/css" href="reset.css" />
+		<title>万圣节</title>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		</script>
+		<!-- <script src="#getAppRoot()/js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	    <script src="js/bwrdfr-i.js"></script>
+	    <script src="js/bwrdfr.js"></script>
+	    <script src="js/json-mini.js"></script> -->
+		<style>
+			body{
+				background:#041D07 url(bgindex.jpg) no-repeat center top;
+				background-size: 100%;
+				padding-top: 4rem
+			}
+			  @-webkit-keyframes light1_wd{
+			      60%{
+			        opacity: 0.7;
+			        background: -webkit-radial-gradient(rgba(255,223,67,1), rgba(255,223,67,0) 70%);
+			      }
+			  }
+			  @keyframes light1_wd{
+			      60%{
+			        opacity: 0.7;
+			        background: radial-gradient(rgba(255,223,67,1), rgba(255,223,67,0) 70%);
+			      }
+			  }
+			  @-webkit-keyframes light2_wd{
+			  	15%{
+			        opacity: 0.4;
+			        background: rgba(255,255,255,0.5);
+			      }
+			      50%{
+			        opacity: 0.7;
+			        background: rgba(255,223,67,1);
+			      }
+			  }
+			  @keyframes light2_wd{
+			      15%{
+			        opacity: 0.4;
+			        background: rgba(255,255,255,0.5);
+			      }
+			      50%{
+			        opacity: 0.7;
+			        background: rgba(255,223,67,1);
+			      }
+			  }
+			  @-webkit-keyframes batfly{
+			  	20%{
+			  		-webkit-transform:translate(3rem,3rem) rotateY(180deg) scale(1.5);
+			  	  }
+			  	35%{
+			       -webkit-transform:translate(5rem,2rem) rotateY(180deg);
+			      }
+			    50%{
+			       -webkit-transform:translate(7.6rem,3rem) rotateY(180deg);
+			      }
+			    51%{
+			       -webkit-transform:translate(7.6rem,3.5rem) scale(0.3);
+			      }
+			    100%{
+			       -webkit-transform:translate(-.2rem,-.2rem);
+			      }
+			  }
+			  @keyframes batfly{
+			  	20%{
+			  		transform:translate(3rem,3rem) rotateY(180deg) scale(1.5);
+			  	  }
+			  	35%{
+			       transform:translate(5rem,2rem) rotateY(180deg);
+			      }
+			    50%{
+			       transform:translate(7.6rem,3rem) rotateY(180deg);
+			      }
+			    51%{
+			       transform:translate(7.6rem,3.5rem) scale(0.3);
+			      }
+			    100%{
+			       transform:translate(-.2rem,-.2rem);
+			      }
+			  }
+			  @-webkit-keyframes batfly-two{
+			  	10%{
+			  		-webkit-transform:translate(1rem,1rem) rotateY(180deg) scale(1.2);
+			  	}
+			  	25%{
+			       -webkit-transform:translate(3.5rem,2.5rem) rotateY(180deg)scale(0.8);
+			      }
+			    40%{
+			       -webkit-transform:translate(6rem,1.5rem) rotateY(180deg) scale(1.2);
+			      }
+			    50%{
+			       -webkit-transform:translate(8rem,3.5rem) rotateY(180deg);
+			      }
+			    52%{
+			       -webkit-transform:translate(8rem,3.7rem) scale(0.2);
+			      }
+			    100%{
+			       -webkit-transform:translate(-.2rem,-.2rem);
+			      }
+			  }
+			   @keyframes batfly-two{
+			  	10%{
+			  		transform:translate(1rem,1rem) rotateY(180deg) scale(1.2);
+			  	}
+			  	25%{
+			       transform:translate(3.5rem,2.5rem) rotateY(180deg)scale(0.8);
+			      }
+			    40%{
+			       transform:translate(6rem,1.5rem) rotateY(180deg) scale(1.2);
+			      }
+			    50%{
+			       transform:translate(8rem,3.5rem) rotateY(180deg);
+			      }
+			    52%{
+			       transform:translate(8rem,3.7rem) scale(0.2);
+			      }
+			    100%{
+			       transform:translate(-.2rem,-.2rem);
+			      }
+			  }
+			 .batfly{
+			  	-webkit-animation:batfly 10s 0s infinite;
+			    animation: batfly 10s 0s infinite;
+			  }
+			 .batfly-two{
+			    -webkit-animation:batfly-two 7s 3s infinite;
+			    animation: batfly-two 7s 3s infinite;
+			  }
+			.light1_wd{
+			   -webkit-animation:light1_wd 1.5s 0s infinite;
+			   animation: light1_wd 1.5s 0s infinite;
+			}
+			.light2_wd{
+			   -webkit-animation:light2_wd 1.5s 0s infinite;
+			   animation: light2_wd 1.5s 0s infinite;
+			}
+			.pumpkin_wd{
+			  position: relative;
+			   width: 7rem;
+			  height: 7rem;
+			  margin: 0 auto;
+			}
+			.pump_wd{
+			   width: 5.17rem;
+			   height: 5.45rem;
+			   position: absolute;
+			   z-index: 2;
+			   top: 50%;
+			   left: 50%;
+
+			   -webkit-transform: translate(-50%, -50%);
+			   transform: translate(-50%, -50%);
+			 }
+			 .light_wd {
+			  width: 6rem;
+			  height: 6rem;
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  -webkit-transform: translate(-50%, -50%);
+			  transform: translate(-50%, -50%);
+			  z-index: 1;
+			  
+			}
+			.comlight{
+			   border-radius: 50%;
+			   opacity: 0;
+			   position: absolute;
+			   display: block;
+			   top: 50%;
+			   left: 50%;
+			   -webkit-transform: translate(-50%, -50%);
+			   transform: translate(-50%, -50%);
+			   transition: all 1000ms ;
+			}
+			.light_wd .glow {
+			  width: 6.8rem;
+			  height: 6.8rem;
+			  background: -webkit-radial-gradient(rgba(255,255,255,1), rgba(255,223,67,0) 70%);
+			}
+
+			.light_wd .flare {
+			  width: 3.5rem;
+			  height: 3.5rem;
+			  background: rgba(255,223,67,0);
+			}
+			.batImg{
+				width: 1.52rem;
+				height: 0.64rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+				-webkit-transform: rotateY(180deg);
+				transform: rotateY(180deg);
+			}
+			.batImg1{
+				width: 1.52rem;
+				height: 0.64rem;
+				position: absolute;
+				top: -1rem;
+				left: -1rem;
+				-webkit-transform: rotateY(180deg);
+				transform: rotateY(180deg);
+			}
+		</style>
+	</head>
+	<body class="fs14">
+		 <img src="bat.png" class="batImg batfly">
+		  <img src="bat.png" class="batImg1 batfly-two">
+		 <div class="pumpkin_wd" >
+	      <img src="lights.png" class="pump_wd">
+	      <div class="light_wd">
+	        <span class="glow light1_wd comlight"></span>
+	        <span class="flare light2_wd comlight"></span>
+	      <div> 
+	    </div>
+	</body>
+</html>

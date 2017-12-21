@@ -1,0 +1,59 @@
+@charset "utf-8";
+/*重置样式*/
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block}article,aside,audio,blockquote,body,button,code,dd,dialog,div,dl,dt,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,input,legend,li,nav,ol,p,pre,section,td,textarea,th,ul,video{margin:0;padding:0;border:0;vertical-align:baseline}img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-weight:400;font-style:normal}h1,h2,h3,h4,h5,h6{font-weight:400;font-size:100%}input,select,textarea{font-weight:inherit;font-size:inherit;font-family:inherit}li{list-style:none}table{border-collapse:collapse;border-spacing:0}a:link,a:visited{text-decoration:none}q:after,q:before{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}
+/*通过样式*/
+body,html{box-sizing:border-box;width:100%;color:#333;font-family:"Microsoft YaHei",Arial,YouYuan,"Arial Bold";}
+html{height:100%;}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/*清除点击按钮的默认灰色外框*/
+html{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+img{vertical-align:top;}
+input{outline:none;}
+*:focus{outline: none;}
+input[type=date],input[type=text],input[type=tel],input[type=number],input[type=password],input[type=submit],input[type=button],select,textarea{outline:0;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+input[type=checkbox]{border:1px solid #ccc;}
+* input:-moz-placeholder{color:#b4b3b3;font-family:"Microsoft YaHei",Helvetica,Arial,YouYuan,sans-serif;}
+* input::-moz-placeholder{color:#b4b3b3;font-family:"Microsoft YaHei",Helvetica,Arial,YouYuan,sans-serif;}
+* input::-webkit-input-placeholder{color:#b4b3b3;font-family:"Microsoft YaHei",Helvetica,Arial,YouYuan,sans-serif;}
+* input:-ms-input-placeholder{color:#b4b3b3;font-family:"Microsoft YaHei",Helvetica,Arial,YouYuan,sans-serif;}
+@media screen and (max-width:321px){.fs10{font-size:9px;line-height:15px;}
+    .fs12{font-size:11px;line-height:19px;}
+    .fs14{font-size:13px;line-height:21px;}
+    .fs16{font-size:15px;line-height:30px;}
+    .fs18{font-size:17px;}
+    .fs20{font-size:19px;}
+}
+@media screen and (min-width:321px) and (max-width:400px){.fs10{font-size:10px;line-height:16px;}
+    .fs12{font-size:12px;line-height:20px;}
+    .fs14{font-size:14px;line-height:22px;}
+    .fs16{font-size:16px;line-height:32px;}
+    .fs18{font-size:18px;}
+    .fs20{font-size:20px;}
+}
+@media screen and (min-width:400px){.fs10{font-size:12px;line-height:17px;}
+    .fs12{font-size:14px;line-height:22px;}
+    .fs14{font-size:16px;line-height:24px;}
+    .fs16{font-size:18px;line-height:34px;}
+    .fs18{font-size:19px;}
+    .fs20{font-size:21px;}
+}
+.fs0{font-size:0;line-height:0;}
+.clearfix:after,.clearfix:before{display:table;content:"";}
+.clearfix:after{clear:both;}
+.btn{text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;}
+.hide{display:none;}
+.text-hide{border:0;background-color:transparent;color:transparent;text-shadow:none;font:0/0 a;}
+.rel{position:relative;}
+.center{text-align:center;}
+.elip{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.flex{display:flex;display:-webkit-flex;}
+.flex-dir{flex-direction:column;justify-content:center;}
+.flex-child{flex:1;-webkit-flex:1;}
+.space-between{justify-content:space-between;-webkit-justify-content:space-between;}
+.radius{border-radius:5px;}
+.imgWidth100{width:100%;}
+.imgHeight100{height:100%;}
+.index-bg1{position:relative;top:0;left:0;width:100%;height:100%;}
+.mask{position:fixed;top:0;left:0;z-index:10000;width:100%;height:100%;background:rgba(0 ,0 ,0 ,.8);}
+.share-mask {display: none;position: fixed;width: 100%;height: 100%;top: 0;left: 0;background: rgba(0, 0, 0, 0.8);z-index:10000;}
+.share-signImg {position:fixed;z-index:13;width:50%;top:0;right:0;text-align:center;border-radius:3px  }
